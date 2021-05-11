@@ -11,15 +11,22 @@ This is specifically formatted with Aztec C 1.06d in mind:
   This allows you to write similar sounding functions in your own code, and to maintain compatibility with my `conio.h` implementation. Certain functions, like the bitmap functions, do not follow this because I assume you have no other hardware capable of drawing/loading bitmaps in this way.
 * Defines and variable declarations are C89 standard
 
+Table of Contents
+
+[Macros](#macros)
+
+Functions
+
+
+
+
+
 ## Breakdown
 
 The include file is split into several chunks.
 
 
-[Macros](#macros)
 
-
-[Hello](#anchor-name)
 
 lorem
 asfasf
