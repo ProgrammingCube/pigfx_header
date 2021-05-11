@@ -13,7 +13,7 @@ This is specifically formatted with Aztec C 1.06d in mind:
 
 ## Defines
 
-- [Defines](#defines)
+- [Defines](#defines-1)
   - Escape key
   - Fill/nofill
   - Font size
@@ -83,5 +83,5 @@ This is specifically formatted with Aztec C 1.06d in mind:
 
 
 
-<a name="defines"></a>
+<a name="defines-1"></a>
 ### Defines
