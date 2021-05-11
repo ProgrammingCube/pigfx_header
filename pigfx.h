@@ -11,7 +11,9 @@
 #ifndef PIGFX_H
 #define PIGFX_H
 
+#ifndef ESC
 #define ESC     27
+#endif
 
 #define NOFILL  0
 #define FILL    1
@@ -32,7 +34,7 @@
 
 /* Cursor routines */
 
-pgCInsv()
+pgCInvs()
 {
     printf("%c[?25l",ESC);
 }
@@ -126,23 +128,23 @@ pgClScr()
 
 /* insert/delete */
 
-pgShRgt()
+pgInsCh()
 {
     printf("%c[1@",ESC);
 }
 
 
-pgShLft()
+pgDelCh()
 {
     printf("%c[1P",ESC);
 }
 
-pgShDwn()
+pgInsLn()
 {
     printf("%c[1L",ESC);
 }
 
-pgShUp()
+pgDelLn()
 {
     printf("%c[1M",ESC);
 }
@@ -202,7 +204,7 @@ int x, y;
     printf("%c[#%d;%d;%d;%da",ESC,idx,x,y,b);
 }
 
-ldRSscBmp(idx, x, y, b)
+ldRAscBmp(idx, x, y, b)
 unsigned char idx, b;
 int x, y;
 {
@@ -282,25 +284,30 @@ int x;
    those.
 */
 
-pgFrClr(x)
+pgRsClr()
+{
+    printf("%c[m",ESC);
+}
+
+pgFgClr(x)
 unsigned char x;
 {
     printf("%c[38;5;%dm",ESC,x);
 }
 
-pgFrClrD(x)
+pgFgClrD(x)
 unsigned char x;
 {
     printf("%c[38;6;%dm",ESC,x);
 }
 
-pgBkClr(x)
+pgBgClr(x)
 unsigned char x;
 {
     printf("%c[48;5;%dm",ESC,x);
 }
 
-pgBkClrD(x)
+pgBgClrD(x)
 unsigned char x;
 {
     printf("%c[48;6;%dm",ESC,x);

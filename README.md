@@ -11,44 +11,77 @@ This is specifically formatted with Aztec C 1.06d in mind:
   This allows you to write similar sounding functions in your own code, and to maintain compatibility with my `conio.h` implementation. Certain functions, like the bitmap functions, do not follow this because I assume you have no other hardware capable of drawing/loading bitmaps in this way.
 * Defines and variable declarations are C89 standard
 
-Table of Contents
+## Defines
 
-[Macros](#macros)
+- [Defines](#defines)
+  - Escape key
+  - Fill/nofill
+  - Font size
+  - Palette
+  - Base
 
-Functions
+## Functions
+- [Cursor routines](#cursor-routines)
+  - pgCInvs()
+  - pgCBlnk()
+  - pgCZero()
+  - pgCSave()
+  - pgCRstr()
+  - pgCMove(`x, y`)
+  - pgCUp(`x`)
+  - pgCDown(`x`)
+  - pgCFwrd(`x`)
+  - pgCBack(`x`)
+- [Screen clearing routines](#screen-clearing-routines)
+  - pgClEnd()
+  - pgClBeg()
+  - pgClLin()
+  - pgClCur()
+  - pgClScr()
+- [Insert/delete routines](#insertdel-routines)
+  - pgInsCh()
+  - pgDelCh()
+  - pgInsLn()
+  - pgDelLn()
+- [Graphics routines](#graphics-routines)
+  - pgLine(`x1, y1, x2, y2`)
+  - pgRect(`x, y, x, h, fill`)
+  - pgCirc(`x, y, r, fill`)
+  - pgTri(`x1, y1, x2, y2, x3, y3`)
+- [Bitmap routines](#bitmap-routines)
+  - ldAscBmp(`idx, x, y, base`)
+  - ldRAscBmp(`idx, x, y, base`)
+  - ldRawBmp(`idx, x, y`)
+  - ldRleBmp(`idx, x, y`)
+  - drawBmp(`idx, x, y`)
+  - drawSprt(`idx, ref, x, y`)
+  - remvSprt(`idx`)
+  - moveSprt(`idx, x, y`)
+- [Scrolling routines](#scrolling-routines)
+  - pgScUp(`x`)
+  - pgScDwn(`x`)
+  - pgScLft(`x`)
+  - pgScRgt(`x`)
+- [PiGFX Settings](#pigfx-settings)
+  - pgRsClr()
+  - pgFgClr(`x`)
+  - pgFgClrD(`x`)
+  - pgBgClr(`x`)
+  - pgBgClrD(`x`)
+  - pgTrClr(`x`)
+  - pgRstDrw()
+  - pgXor()
+  - pgTrDrw()
+  - pgStFnt(`font`)
+  - pgStTab(`x`)
+  - pgDspMd(`x`)
+  - pgLdPal(`palette`)
+  - pgStPal(`palette`)
 
 
 
 
 
-## Breakdown
-
-The include file is split into several chunks.
 
 
-
-
-lorem
-asfasf
-asdf
-asdf
-asdf
-asdf
-asdfasdfasd
-
-
-asdf
-
-asdfa
-
-
-asdfcv
-
-asdf
-
-
-asdf
-
-asdf
-
-<a name="macros"></a>Macros
+### Defines<a name="defines"></a>
