@@ -86,5 +86,14 @@ This is specifically formatted with Aztec C 1.06d in mind:
 
 ### Defines
 
-<a name="screen-clearing-routines-1"></a>
-### screen clearing
+### Screen clearing routines
+
+### <a name="insertdel-routines"></a>Insert/Delete routines
+
+### Graphics routines
+
+### Bitmap routines
+
+### Scrolling routines
+
+### PiGFX Settings
