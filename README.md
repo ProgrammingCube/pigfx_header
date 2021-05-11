@@ -32,7 +32,7 @@ This is specifically formatted with Aztec C 1.06d in mind:
   - pgCDown(`x`)
   - pgCFwrd(`x`)
   - pgCBack(`x`)
-- [Screen clearing routines](#screen-clearing-routines)
+- [Screen clearing routines](#screen-clearing-routines-1)
   - pgClEnd()
   - pgClBeg()
   - pgClLin()
@@ -85,3 +85,6 @@ This is specifically formatted with Aztec C 1.06d in mind:
 
 <a name="defines-1"></a>
 ### Defines
+
+<a name="screen-clearing-routines-1"></a>
+### screen clearing
