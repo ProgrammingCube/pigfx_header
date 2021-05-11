@@ -78,14 +78,27 @@ This is specifically formatted with Aztec C 1.06d in mind:
   - pgLdPal(`palette`)
   - pgStPal(`palette`)
 
-
-
-
-
-
-
 ### Defines
+- ESC
+  - The ESCAPE key (`ESC`) ASCII code is defined here
+- Fill/nofill
+  - `FILL`/`NOFILL` are defined in order to draw a filled or empty shape.
+- Font size
 
+  All fonts here are TRS-80 fonts
+  - `_8X8`
+  - `_8X16`
+  - `_8X24`
+- Palette
+  These defines are used to change the color palette.
+  - `XTERM`
+  - `VGA`
+  - `CUSTOM`
+  - `C64`
+- Base
+  These defines are used to specify the base of encoded bitmaps
+  - `HEX`
+  - `DEC`
 ### Screen clearing routines
 
 ### <a name="insertdel-routines"></a>Insert/Delete routines
