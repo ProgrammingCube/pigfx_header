@@ -11,9 +11,9 @@ This is specifically formatted with Aztec C 1.06d in mind:
   This allows you to write similar sounding functions in your own code, and to maintain compatibility with my `conio.h` implementation. Certain functions, like the bitmap functions, do not follow this because I assume you have no other hardware capable of drawing/loading bitmaps in this way.
 * Defines and variable declarations are C89 standard
 
-## Defines
+## Definitions
 
-- [Defines](#defines-1)
+- [Defines](#defines)
   - Escape key
   - Fill/nofill
   - Font size
@@ -32,7 +32,7 @@ This is specifically formatted with Aztec C 1.06d in mind:
   - pgCDown(`x`)
   - pgCFwrd(`x`)
   - pgCBack(`x`)
-- [Screen clearing routines](#screen-clearing-routines-1)
+- [Screen clearing routines](#screen-clearing-routines)
   - pgClEnd()
   - pgClBeg()
   - pgClLin()
@@ -83,7 +83,7 @@ This is specifically formatted with Aztec C 1.06d in mind:
 
 
 
-<a name="defines-1"></a>
+
 ### Defines
 
 <a name="screen-clearing-routines-1"></a>
