@@ -36,8 +36,8 @@ This is specifically formatted with Aztec C 1.06d in mind:
   - pgClEnd()
   - pgClBeg()
   - pgClLin()
-  - pgClCur()
-  - pgClScr()
+  - pgClCur(`x`)
+  - pgClScr()*
 - [Insert/delete routines](#insertdel-routines)
   - pgInsCh()
   - pgDelCh()
@@ -90,21 +90,101 @@ This is specifically formatted with Aztec C 1.06d in mind:
   - `_8X16`
   - `_8X24`
 - Palette
+
   These defines are used to change the color palette.
   - `XTERM`
   - `VGA`
   - `CUSTOM`
   - `C64`
 - Base
+
   These defines are used to specify the base of encoded bitmaps
   - `HEX`
   - `DEC`
+### Cursor routines
+- pgCInvs()
+
+  Cursor invisible
+
+- pgCBlnk()
+
+  Cursor blinking
+
+- pgCVis()
+
+  Cursor visible
+
+- pgCZero()
+
+  Move cursor to 0,0
+
+- pgCSave()
+
+  Save the cursor position
+
+- pgCRstr()
+
+  Move cursor to previously saved position
+
+- pgCMove(`x`,`y`)
+
+  Moves cursor to `y`,`x`
+
+- pgCUp(`x`)
+
+  Move the cursor up `x` lines
+
+- pgCDown(`x`)
+
+  Move the cursor down `x` lines
+
+- pgCFwrd(`x`)
+
+  Move the cursor to the right `x` columns
+
+- pgCBack(`x`)
+
+  Move the cursor to the left `x` columns
+
 ### Screen clearing routines
+- pgClEnd()
 
+  Clear text from cursor to end of line
+
+- pgClBeg()
+
+  Clear text from beginning of line to cursor
+
+- pgClLin()
+
+  Clear the whole line
+
+- pgClCur(`x`)
+  - If `x` == 0, clear the screen from cursor
+  - If `x` == 1, clear the screen from cursor position
+
+- pgClScr()
+
+  Clears the screen and moves the cursor to `0`,`0`. Defined sprites are removed, loaded bitmaps are kept.
+  **This is different from the normal VT100 code.** Double check your source code for conflicts.
 ### <a name="insertdel-routines"></a>Insert/Delete routines
+- pgInsCh()
 
+  Insert a blank character position (shift line to the right)
+
+- pgDelCh()
+
+  Delete a blank character position (shift line to the left)
+
+- pgInsLn()
+
+  Insert a blank line at current row (shift screen down)
+
+- pgDelLn()
+
+  Delete the current line (shift screen up)
 ### Graphics routines
-
+- 
 ### Bitmap routines
 
 ### Scrolling routines

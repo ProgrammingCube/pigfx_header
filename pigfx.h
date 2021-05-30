@@ -44,6 +44,11 @@ pgCBlnk()
     printf("%c[?25b",ESC);
 }
 
+pgCVis()
+{
+    printf("%c[?25h",ESC);
+}
+
 pgCZero()
 {
     printf("%c[H",ESC);
